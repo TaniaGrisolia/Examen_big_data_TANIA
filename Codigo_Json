@@ -1,0 +1,40 @@
+import json
+import random
+from datetime import datetine, tinedelta from faker import Faker
+fake = Faker(' es_MX") • Configurado para México
+* Catálogos base
+regiones = ['Norte', 'Sur', 'Centro', "Occidente', "Oriente']
+sucursales = (
+"Norte': ['Monterrey', "Tijuana', "Chihuahua'],
+"Sur": ['Cancún',
+"Mérida',
+"Oaxaca'].
+"Centro": ['CDMX',
+"Toluca', "Puebla'].
+"Occidente': ['Guadalajara',
+"Zapopan', "Puerto Vallarta'),
+'Oriente': ['Veracruz', "Xalapa',
+"Puebla']
+categorias_productos = (
+"Electrónica': ['Smartphone', "Laptop', "Tablet',
+"Linea Blanca': ['Refrigerador',
+"Microondas',
+"Audifonos inalámbricos"],
+"Lavadora']
+"Ropa': ['Camisa', 'Pantalón Jeans', "Chaqueta',
+"Hogar"
+"Tenis Deportivos 1.
+: ['Sofá', "Mesa de centro', "Lánpara LED']
+metodos_pago = ['Tarjeta de Crédito', "Tarjeta de Débito', 'Efectivo", "Transferencia', "PayPal j
+datos=
+• 1. Generar 1050 registros base (para luego neter duplicados y nulos)
+• for i in range(1, 1851):
+reg = random. choice(regiones)
+suc = random.choice(sucursales(reg])
+cat = random.choice(list(categortas_productos.keys()))
+prod = random.choice(categortas_productos[cat])
+• Precios lógicos por categoría base_precio = ('Electrónica': 8000, 'Línea Blanca': 12000,
+"Ropa': 600,
+"Hogar': 2500)
+precio = round(base_precio[cat] * randon. uniforn(0.7, 1.5), 2)
+cantidad = random.randint(1, 5)
