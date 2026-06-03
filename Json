@@ -1,0 +1,455 @@
+{
+  "apiVersion": "dashboard.grafana.app/v2",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "ad8kqk5",
+    "namespace": "default",
+    "uid": "66659fd2-4c90-4bed-b97b-d349504943de",
+    "resourceVersion": "1780368126711997",
+    "generation": 3,
+    "creationTimestamp": "2026-06-02T02:25:41Z",
+    "labels": {
+      "grafana.app/deprecatedInternalID": "3349367977963520"
+    },
+    "annotations": {
+      "grafana.app/createdBy": "user:ffnqxdxg3yxa8e",
+      "grafana.app/folder": "",
+      "grafana.app/saved-from-ui": "Grafana v13.0.1+security-01 (9bbe672d)",
+      "grafana.app/updatedBy": "user:ffnqxdxg3yxa8e",
+      "grafana.app/updatedTimestamp": "2026-06-02T02:42:06Z"
+    }
+  },
+  "spec": {
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "query": {
+            "kind": "DataQuery",
+            "group": "grafana",
+            "version": "v0",
+            "datasource": {
+              "name": "-- Grafana --"
+            },
+            "spec": {}
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "builtIn": true
+        }
+      }
+    ],
+    "cursorSync": "Off",
+    "editable": true,
+    "elements": {
+      "panel-1": {
+        "kind": "Panel",
+        "spec": {
+          "id": 1,
+          "title": "New panel",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "marcusolsson-csv-datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfnu4k0g6axvkb"
+                      },
+                      "spec": {
+                        "schema": [
+                          {
+                            "name": "",
+                            "type": "string"
+                          }
+                        ]
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "convertFieldType",
+                  "spec": {
+                    "options": {
+                      "conversions": [
+                        {
+                          "destinationType": "number",
+                          "targetField": "Field 9"
+                        }
+                      ],
+                      "fields": {}
+                    }
+                  }
+                },
+                {
+                  "kind": "Transformation",
+                  "group": "groupBy",
+                  "spec": {
+                    "options": {
+                      "fields": {
+                        "Field 1": {
+                          "aggregations": [
+                            "count"
+                          ]
+                        },
+                        "Field 11": {
+                          "aggregations": [],
+                          "operation": "groupby"
+                        },
+                        "Field 9": {
+                          "aggregations": [
+                            "sum"
+                          ],
+                          "operation": "aggregate"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "barchart",
+            "version": "13.0.1+security-01",
+            "spec": {
+              "options": {
+                "barRadius": 0,
+                "barWidth": 0.97,
+                "fullHighlight": false,
+                "groupWidth": 0.7,
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "orientation": "auto",
+                "showValue": "auto",
+                "stacking": "none",
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                },
+                "xField": "Field 11",
+                "xTickLabelRotation": 0,
+                "xTickLabelSpacing": 0
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "fillOpacity": 80,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "lineWidth": 1,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  }
+                },
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-2": {
+        "kind": "Panel",
+        "spec": {
+          "id": 2,
+          "title": "New panel",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "marcusolsson-csv-datasource",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfnu4k0g6axvkb"
+                      },
+                      "spec": {
+                        "schema": [
+                          {
+                            "name": "",
+                            "type": "string"
+                          }
+                        ]
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [
+                {
+                  "kind": "Transformation",
+                  "group": "groupBy",
+                  "spec": {
+                    "options": {
+                      "fields": {
+                        "Field 1": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 10": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 11": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 12": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 13": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 14": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 15": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 2": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 3": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 4": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 5": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 6": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 7": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 8": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        },
+                        "Field 9": {
+                          "aggregations": [
+                            "count"
+                          ],
+                          "operation": "groupby"
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "piechart",
+            "version": "13.0.1+security-01",
+            "spec": {
+              "options": {
+                "legend": {
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "pieType": "pie",
+                "reduceOptions": {
+                  "calcs": [
+                    "lastNotNull"
+                  ],
+                  "fields": "",
+                  "values": false
+                },
+                "sort": "desc",
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                }
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    }
+                  }
+                },
+                "overrides": []
+              }
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "kind": "GridLayout",
+      "spec": {
+        "items": [
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 0,
+              "y": 0,
+              "width": 12,
+              "height": 8,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-1"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 12,
+              "y": 0,
+              "width": 12,
+              "height": 8,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-2"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "links": [],
+    "liveNow": false,
+    "preload": false,
+    "tags": [],
+    "timeSettings": {
+      "timezone": "browser",
+      "from": "now-5m",
+      "to": "now",
+      "autoRefresh": "5s",
+      "autoRefreshIntervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "hideTimepicker": false,
+      "fiscalYearStartMonth": 0
+    },
+    "title": "New dashboard",
+    "variables": [],
+    "preferences": {
+      "layout": {
+        "kind": "GridLayout",
+        "spec": {
+          "items": []
+        }
+      }
+    }
+  }
+}
